@@ -1,0 +1,239 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+body {
+  background-color: #ffcc00;
+  margin: 0;
+}
+
+h1, h2, h3, p, ul, li {
+  font-family: Roboto, sans-serif;
+  color: #222222;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $light-yellow;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 1em;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    li {
+      display: inline;
+      list-style-type: none;
+      margin: 0;
+      a {
+        color: #222222;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.content {
+  @include flex;
+  overflow: hidden;
+  main {
+    z-index: 0;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.banner {
+  @include flex;
+  position: relative;
+  z-index: -1;
+  flex-flow: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $light-yellow;
+  img {
+    height: 10em;
+    width: 10em;
+    padding: 2%;
+    z-index: 1;
+    padding-bottom: 0;
+  }
+  h1 {
+    font-size: 3em;
+    margin: 0.5em;
+  }
+  h2 {
+    margin-bottom: 0.5em;
+  }
+  .triangle {
+    @include triangle;
+    bottom: 20vh;
+  }
+  .triangle2 {
+    @include triangle;
+    bottom: 50vh;
+  }
+  .triangle3 {
+    @include triangle;
+    bottom: 80vh;
+  }
+  .social {
+    @include social;
+  }
+}
+
+.allProjects {
+  z-index: 1;
+  background: $gradient;
+  padding: 10em 0 10em 0;
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .projects {
+    @include flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 0 auto;
+    .item {
+      @include flex;
+      flex-basis: 40rem;
+      position: relative;
+      transition: all 0.8s ease-in-out;
+      &:hover > .description {
+        z-index: 1;
+        bottom: 0;
+        height: 100%;
+      }
+      img {
+        max-height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+      .description {
+        @include flex;
+        align-items: flex-start;
+        flex-flow: row;
+        position: absolute;
+        bottom: 100%;
+        max-height: 100%;
+        left: 0;
+        right: 0;
+        background-color: $light-yellow;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+        .description-content {
+          @include flex;
+          flex-direction: column;
+          padding: 1em;
+          width: 50%;
+          h3 {
+            text-align: left;
+            font-size: 2em;
+            font-weight: 700;
+          }
+          .tech-tree {
+            display: flex;
+            justify-content: center;
+            flex-flow: row;
+            width: 3em;
+            height: 3em;
+            margin: 2em 0 2em 0;
+            img {
+              margin-right: 0.3em;
+              object-fit:scale-down;
+            }
+          }
+          .links {
+            @include flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            a {
+              @include flex;
+              flex-direction: row;
+              height: 2.2em;
+              width: 7em;
+              margin-right: 0.3em;
+              background-color: #222222;
+              text-decoration: none;
+              transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+              &:hover {
+                background-color: $yellow;
+              }
+              &:hover > svg {
+                fill: #222222;
+              }
+              &:hover > p {
+                font-weight: 700;
+                color: #222222;
+              }
+              svg {
+                height: 1.6em;
+                width: 1.6em;
+                margin-right: 0.4em;
+                fill: #ffffff;
+              }
+              p {
+                color: #ffffff;
+                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+              }
+            }
+          }
+          p {
+            font-weight: 400;
+          }
+        }
+        .description-text {
+          padding: 2em;
+          padding-bottom: 100%;
+          width: 50%;
+          max-height: 80%;
+          background-color: #ffcc00;
+          overflow-y: auto;
+          p {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  @include flex;
+  flex-flow: column;
+  padding: 5em;
+  background: $gradient;
+  height: 100vh;
+  width: 100vw;
+  h1 {
+    font-size: 3em;
+  }
+  .social, .email, .resume {
+    @include social;
+  }
+}
