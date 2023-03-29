@@ -1,2 +1,2 @@
 # Welcome to my portfolio!
-Live site url: "https://tseppern.github.io/Portfolio"
+Live site url: https://tseppern.github.io/Portfolio
