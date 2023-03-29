@@ -2,7 +2,7 @@
 @import "./styles/mixins";
 
 body {
-  background-color: $yellow;
+  background-color: $light-yellow;
   margin: 0;
 }
 
@@ -237,7 +237,7 @@ h1, h2, h3, p, ul, li {
             margin: 2vw 2vw 2vw 2vw;
             font-size: 1vw;
             @media (width < 900px) {
-              font-size: 2vw;
+              font-size: 4vw;
             }
             a {
               color: #ffffff;
