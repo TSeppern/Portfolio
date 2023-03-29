@@ -5,7 +5,7 @@ class Home extends Component {
     return (
       <main>
         <section className="banner">
-          <img src="./Portfolio/T.svg" alt="T logo"></img>
+          <img src="./Portfolio/images/T.svg" alt="T logo"></img>
           <h1>Timo Seppern</h1>
           <h2>Front-End Developer</h2>
           <div className="triangle" alt="gradient triangle"></div>
@@ -28,14 +28,14 @@ class Home extends Component {
           <h1>Projects - My past work samples</h1>
           <div className="projects"> 
             <div className="item">
-              <img src="./Portfolio/Sillamäe-Invaders.jpg" alt="Space Invaders Like Game"></img>
+              <img src="./Portfolio/images/Sillamäe-Invaders.jpg" alt="Space Invaders Like Game"></img>
               <div className="description">
                 <div className="description-content">
                   <h3>Sillamäe Invaders Video Game</h3>
                   <div className="tech-tree">
-                    <img src="./Portfolio/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
-                    <img src="./Portfolio/html-icon.png" alt="HTML5 icon"></img>
-                    <img src="./Portfolio/css-icon.png" alt="CSS3 icon"></img>
+                    <img src="./Portfolio/images/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
+                    <img src="./Portfolio/images/html-icon.png" alt="HTML5 icon"></img>
+                    <img src="./Portfolio/images/css-icon.png" alt="CSS3 icon"></img>
                   </div>
                   <div className="links">
                     <a href="https://tseppern.github.io/Sillamae-Invaders/" target="_blank" rel="noreferrer">
@@ -58,15 +58,15 @@ class Home extends Component {
               </div>
             </div>
             <div className="item">
-              <img src="./Portfolio/Pirjopaulus.jpg" alt="Wordpress Brow Studio Webpage"></img>
+              <img src="./Portfolio/images/Pirjopaulus.jpg" alt="Wordpress Brow Studio Webpage"></img>
               <div className="description">
                 <div className="description-content">
                   <h3>Brow Studio Wordpress Page</h3>
                   <div className="tech-tree">
-                    <img src="./Portfolio/wordpress-icon.png" alt="Wordpress site bulding tool icon"></img>
-                    <img src="./Portfolio/elementor-icon.png" alt="Elementor wordpress builder icon"></img>
-                    <img src="./Portfolio/woocommerce-icon.png" alt="Woocommerce web store builder for wordpress icon"></img>
-                    <img src="./Portfolio/figma-icon.png" alt="Figma program icon"></img>
+                    <img src="./Portfolio/images/wordpress-icon.png" alt="Wordpress site bulding tool icon"></img>
+                    <img src="./Portfolio/images/elementor-icon.png" alt="Elementor wordpress builder icon"></img>
+                    <img src="./Portfolio/images/woocommerce-icon.png" alt="Woocommerce web store builder for wordpress icon"></img>
+                    <img src="./Portfolio/images/figma-icon.png" alt="Figma program icon"></img>
                   </div>
                   <div className="links">
                     <a href="https://pirjopaulus.com" target="_blank" rel="noreferrer">
@@ -83,14 +83,14 @@ class Home extends Component {
               </div>
             </div>
             <div className="item">
-              <img src="./Portfolio/FAQ-Accordion.jpg" alt="FAQ Accordion Card"></img>
+              <img src="./Portfolio/images/FAQ-Accordion.jpg" alt="FAQ Accordion Card"></img>
               <div className="description">
                 <div className="description-content">
                   <h3>Example FAQ Accordion Card</h3>
                   <div className="tech-tree">
-                    <img src="./Portfolio/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
-                    <img src="./Portfolio/html-icon.png" alt="HTML5 icon"></img>
-                    <img src="./Portfolio/css-icon.png" alt="CSS3 icon"></img>
+                    <img src="./Portfolio/images/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
+                    <img src="./Portfolio/images/html-icon.png" alt="HTML5 icon"></img>
+                    <img src="./Portfolio/images/css-icon.png" alt="CSS3 icon"></img>
                   </div>
                   <div className="links">
                     <a href="https://tseppern.github.io/faq-accordion-card-main/" target="_blank" rel="noreferrer">
@@ -113,14 +113,14 @@ class Home extends Component {
               </div>
             </div>
             <div className="item">
-              <img src="./Portfolio/Advice-Generator.jpg" alt="Advice Generator App"></img>
+              <img src="./Portfolio/images/Advice-Generator.jpg" alt="Advice Generator App"></img>
               <div className="description">
                 <div className="description-content"> 
                   <h3>Advice Generator App</h3>
                   <div className="tech-tree">
-                    <img src="./Portfolio/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
-                    <img src="./Portfolio/html-icon.png" alt="HTML5 icon"></img>
-                    <img src="./Portfolio/sass-icon.png" alt="Scss/Sass icon"></img>
+                    <img src="./Portfolio/images/javascript-programming-language-icon.png" alt="Javascript programming language icon"></img>
+                    <img src="./Portfolio/images/html-icon.png" alt="HTML5 icon"></img>
+                    <img src="./Portfolio/images/sass-icon.png" alt="Scss/Sass icon"></img>
                   </div>
                   <div className="links">
                     <a href="https://tseppern.github.io/Advice-generator-app/" target="_blank" rel="noreferrer">
