@@ -108,7 +108,7 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="description-text">
-                  <p>asdasd</p>
+                  <p>This is a solution to the FAQ accordion card challenge on <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam" target="_blank" rel="noreferrer">FAQ accordion card challenge on Frontend Mentor</a>. The challenge was to build the accordion card as close as possible to the JPEG provided. The color values were given, but element sizes were not. I mainly learned some new tricks in CSS about using multiple images and layering them. Also about different ways to incorporate images to the page so that they behave as expected (mainly overflow wise). About HTML I improved my knowledge in SEO and optimization. I didn't have to use a lot of JS, so there was no new knowledge obtained in that field.</p>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="description-text">
-                  <p>using Advice Slip API</p>
+                  <p>This is a solution to the <a href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db" target="_blank" rel="noreferrer">Advice generator app challenge on Frontend Mentor</a>. Mainly I learned how to use SASS and compile it to vanilla CSS using Gulp. I now know how to write reusable elements in SASS. I gained new information about getting data from an Advice Slip API and showing it on my page using JavaScript. And lastly I figured out how to add extensive styling to a button element.</p>
                 </div>
               </div>
             </div>

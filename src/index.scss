@@ -2,14 +2,13 @@
 @import "./styles/mixins";
 
 body {
-  background-color: #ffcc00;
+  background-color: $yellow;
   margin: 0;
 }
 
 h1, h2, h3, p, ul, li {
-  font-family: Roboto, sans-serif;
-  color: #222222;
-  margin: 0;
+  @include fontStyle;
+  color: $dark-gray;
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +20,7 @@ h1, h2, h3, p, ul, li {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: $dark-gray;
   border-radius: 1em;
 }
 
@@ -29,7 +28,7 @@ h1, h2, h3, p, ul, li {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 5;
+  z-index: 1;
   ul {
     display: flex;
     justify-content: flex-end;
@@ -39,11 +38,18 @@ h1, h2, h3, p, ul, li {
       list-style-type: none;
       margin: 0;
       a {
-        color: #222222;
+        color: $dark-gray;
         font-weight: bold;
+        font-size: 1.4em;
         text-decoration: none;
-        padding: 20px;
+        margin: 1em;
         display: inline-block;
+        &:hover {
+          color: $yellow;
+        }
+        &:focus {
+          color: $yellow;
+        }
       }
     }
   }
@@ -81,7 +87,8 @@ h1, h2, h3, p, ul, li {
   }
   h1 {
     font-size: 3em;
-    margin: 0.5em;
+    text-align: center;
+    margin: 0.5em 0.5em 0 0.5em;
   }
   h2 {
     margin-bottom: 0.5em;
@@ -114,14 +121,15 @@ h1, h2, h3, p, ul, li {
   }
   .projects {
     @include flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    margin: 0 auto;
+    flex-flow: row wrap; 
     .item {
       @include flex;
-      flex-basis: 40rem;
+      flex-basis: 40vw;
       position: relative;
       transition: all 0.8s ease-in-out;
+      @media (width < 900px) {
+        flex-basis: 80vw;
+      }
       &:hover > .description {
         z-index: 1;
         bottom: 0;
@@ -134,7 +142,6 @@ h1, h2, h3, p, ul, li {
       }
       .description {
         @include flex;
-        align-items: flex-start;
         flex-flow: row;
         position: absolute;
         bottom: 100%;
@@ -144,7 +151,7 @@ h1, h2, h3, p, ul, li {
         background-color: $light-yellow;
         overflow: hidden;
         width: 100%;
-        height:0;
+        height: 0;
         transition: .5s ease;
         .description-content {
           @include flex;
@@ -152,20 +159,27 @@ h1, h2, h3, p, ul, li {
           padding: 1em;
           width: 50%;
           h3 {
-            text-align: left;
-            font-size: 2em;
+            text-align: center;
+            font-size: 2vw;
             font-weight: 700;
+            @media (width < 900px) {
+              font-size: 4vw;
+            }
           }
           .tech-tree {
             display: flex;
             justify-content: center;
             flex-flow: row;
-            width: 3em;
-            height: 3em;
-            margin: 2em 0 2em 0;
+            width: 2.5vw;
+            height: 2.5vw;
+            margin: 2vw 0 2vw 0;
+            @media (width < 900px) {
+              width: 4vw;
+              height: 4vw;
+            }
             img {
-              margin-right: 0.3em;
-              object-fit:scale-down;
+              margin-right: 0.3vw;
+              object-fit: scale-down;
             }
           }
           .links {
@@ -175,47 +189,60 @@ h1, h2, h3, p, ul, li {
             a {
               @include flex;
               flex-direction: row;
-              height: 2.2em;
-              width: 7em;
-              margin-right: 0.3em;
-              background-color: #222222;
+              height: 2vw;
+              width: 6vw;
+              margin-right: 0.3vw;
+              background-color: $dark-gray;
               text-decoration: none;
               transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+              @media (width < 900px) {
+                height: 3vw;
+                width: 10vw;
+              }
               &:hover {
                 background-color: $yellow;
               }
               &:hover > svg {
-                fill: #222222;
+                fill: $dark-gray;
               }
               &:hover > p {
                 font-weight: 700;
-                color: #222222;
+                color: $dark-gray;
               }
               svg {
-                height: 1.6em;
-                width: 1.6em;
-                margin-right: 0.4em;
+                height: 1.6vw;
+                width: 1.6vw;
+                margin-right: 0.4vw;
                 fill: #ffffff;
               }
               p {
                 color: #ffffff;
+                font-size: 1vw;
                 transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                @media (width < 900px) {
+                  font-size: 1.4vw;
+                }
               }
             }
           }
-          p {
-            font-weight: 400;
-          }
         }
         .description-text {
-          padding: 2em;
-          padding-bottom: 100%;
+          @include flex;
+          align-items: baseline;
+          height: 100%;
           width: 50%;
-          max-height: 80%;
-          background-color: #ffcc00;
+          background-color: $yellow;
           overflow-y: auto;
           p {
-            font-size: 1.1em;
+            margin: 2vw 2vw 2vw 2vw;
+            font-size: 1vw;
+            @media (width < 900px) {
+              font-size: 2vw;
+            }
+            a {
+              color: #ffffff;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -226,14 +253,101 @@ h1, h2, h3, p, ul, li {
 .contact {
   @include flex;
   flex-flow: column;
-  padding: 5em;
   background: $gradient;
-  height: 100vh;
-  width: 100vw;
-  h1 {
-    font-size: 3em;
+  min-height: 100vh;
+  min-width: 100vw;
+  .first {
+    @media (width < 900px) {
+      margin-top: 30vw;
+    }
   }
-  .social, .email, .resume {
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    @media (width < 900px) {
+      margin-left: 4vw;
+      margin-right: 4vw;
+    }
+  }
+  .social, .resume {
     @include social;
+    margin-top: 1vw;
+    margin-bottom: 2.5vw;
+    @media (width < 900px) {
+      margin-bottom: 6vw;
+    }
+  }
+  .email {
+    @include flex;
+    @media (width < 900px) {
+      width: 80%;
+    }
+  }
+}
+form {
+  @include flex;
+  flex-flow: column;
+  width: 40vw;
+  margin: 1vw;
+  @media (width < 900px) {
+    width: 100%;
+  }
+  #email {
+    @include fontStyle;
+    @include formField;
+    width: 40vw;
+    height: 2vw;
+    @media (width < 900px) {
+      width: 100%;
+      height: 4vw;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  ::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+  #message {
+    @include fontStyle;
+    @include formField;
+    width: 40vw;
+    min-height: 4vw;
+    @media (width < 900px) {
+      width: 100%;
+      height: 20vw;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  p {
+    @include fontStyle;
+    color: $dark-gray;
+    font-weight: 700;
+  }
+  button {
+    @include fontStyle;
+    width: 10em;
+    height: 2.5em;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: $dark-gray;
+    color: #ffffff;
+    border: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @media (width < 900px) {
+      margin-bottom: 30vw;
+    }
+    &:hover {
+      background-color: $yellow;
+      color: $dark-gray;
+    }
+    &:active {
+      transform: scale(.9);
+    }
   }
 }
