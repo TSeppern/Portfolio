@@ -9,14 +9,14 @@ class App extends Component {
       <BrowserRouter>
         <div className="header">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="Portfolio/">Home</Link></li>
+            <li><Link to="Portfolio/contact">Contact</Link></li>
           </ul>
         </div>
         <div className="content">
           <Routes>
-            <Route id="Home" path="/" element={<Home/>} />
-            <Route id="Contact" path="/:id" element={<Contact/>} />
+            <Route id="Home" path="Portfolio/" element={<Home/>} />
+            <Route id="Contact" path="Portfolio/:id" element={<Contact/>} />
           </Routes>
         </div>
       </BrowserRouter>
