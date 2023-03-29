@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Link, HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 
 class App extends Component {
   render() {  
     return (
-      <Router>
+      <BrowserRouter>
         <div className="header">
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -19,7 +19,7 @@ class App extends Component {
             <Route id="Contact" path="/:id" element={<Contact/>} />
           </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
